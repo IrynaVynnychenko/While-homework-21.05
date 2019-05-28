@@ -1,17 +1,3 @@
-// let firstNumber = document.querySelector('#firstNumber');
-// let secondNumber = document.querySelector('#secondNumber');
-// const plus = document.querySelector('#plus');
-// const minus = document.querySelector('#minus');
-// let result = document.querySelector('#result');
-
-// plus.addEventListener('click', () => {
-//     result.value = +firstNumber.value + +secondNumber.value;
-// })
-
-// minus.addEventListener('click', () => {
-//     result.value = +firstNumber.value - +secondNumber.value;
-// })
-
 const numbers = document.querySelectorAll('[data-id="number"]');
 const plus = document.querySelector('#plus');
 const minus = document.querySelector('#minus');
@@ -20,6 +6,17 @@ const multiply = document.querySelector('#multiply');
 const deleted = document.querySelector('#delete');
 const total = document.querySelector('#total');
 let resultCalc = document.querySelector('#resultCalc');
+
+//e - это короткая ссылка var для объекта event, которая будет передана обработчикам событий.
+///[-]{0,1}[\d]*[\.]{0,1}[\d]+/g создаёт регулярное выражение, которое ищет один или более символов, после котрых следует пробел и ищет данное совпадение на протяжении всей строки, а также множество другого
+//https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Regular_Expressions
+//при совпадении (.match)
+// const items = ['item1', 'item2', 'item3'];
+// const copy = [];
+
+// items.forEach(function(item){
+//   copy.push(item)
+// });
 
 const sumFunct = (e) => {
     let result = e.value.match(/[-]{0,1}[\d]*[\.]{0,1}[\d]+/g);
