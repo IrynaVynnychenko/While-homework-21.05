@@ -26,6 +26,7 @@ const sumFunct = (e) => {
     });
     return sum;
 }
+
 total.addEventListener('click', () => {
     let result = resultCalc.value.match(/[-]{0,1}[\d]*[\.]{0,1}[\d]+/g);
     if (resultCalc.value.indexOf('/') !== -1) {
@@ -38,6 +39,7 @@ total.addEventListener('click', () => {
         resultCalc.value = +result[0] - +result[1];
     }
 })
+
 const minusFunct = (e) => {
     let result = e.value.match(/[-]{0,1}[\d]*[\.]{0,1}[\d]+/g);
     return +result[0] - +result[1];

@@ -1,0 +1,30 @@
+img {
+    width: 209px;
+    height: 191px;
+}
+
+.work_block {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.new_block {
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    margin: 20px 0px;
+    text-align: center;
+    margin: auto;
+}
+
+input {
+    margin: 10px;
+}
+
+.new_block_item {
+    margin: 10px;
+    padding: 20px;
+    background-color: rgb(255, 0, 234);
+    border-radius: 2px;
+}
