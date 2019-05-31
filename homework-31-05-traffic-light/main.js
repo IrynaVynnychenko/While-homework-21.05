@@ -19,4 +19,24 @@ for (let i = 0; i < red_lights.length; i++) {
             green_lights[i].style.backgroundColor = green_color;
         }
     });
+
+}
+
+
+for (let i = 0; i < green_lights.length; i++) {
+
+    green_lights[i].addEventListener('mouseover', function() {
+        for (let i = 0; i < green_lights.length; i++) {
+            red_lights[i].style.backgroundColor = green_color;
+            green_lights[i].style.backgroundColor = red_color;
+        }
+    });
+
+    green_lights[i].addEventListener('mouseout', function() {
+        for (let i = 0; i < green_lights.length; i++) {
+            red_lights[i].style.backgroundColor = red_color;
+            green_lights[i].style.backgroundColor = green_color;
+        }
+    });
+
 }
