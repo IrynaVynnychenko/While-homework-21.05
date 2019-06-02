@@ -41,9 +41,11 @@ const red_color = "rgb(220, 20, 60)";
 let change = document.querySelector('button');
 
 change.addEventListener('click', function() {
-
     for (let j = 0; j < green_lights.length; j++) {
-        if (green_lights[j].style.backgroundColor == green_color) {
+
+        let checkBg = window.getComputedStyle(green_lights[j]).getPropertyValue("background-color")
+
+        if (checkBg == green_color) {
             red_lights[j].style.backgroundColor = green_color;
             green_lights[j].style.backgroundColor = red_color;
         } else {
