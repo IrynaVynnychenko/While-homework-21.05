@@ -43,13 +43,12 @@ let change = document.querySelector('button');
 change.addEventListener('click', function() {
 
     for (let j = 0; j < green_lights.length; j++) {
-        if (window.getComputedStyle(green_lights[j]).getPropertyValue("background-color") == green_color) {
+        if (green_lights[j].style.backgroundColor == green_color) {
             red_lights[j].style.backgroundColor = green_color;
             green_lights[j].style.backgroundColor = red_color;
         } else {
             red_lights[j].style.backgroundColor = red_color;
             green_lights[j].style.backgroundColor = green_color;
         }
-        console.log(green_lights[j]);
     }
 });
